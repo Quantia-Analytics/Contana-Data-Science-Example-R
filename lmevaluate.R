@@ -49,7 +49,7 @@ frame1$Month <- order.month(frame1$Month)
 
 plot.milk.box <- function(data){
   ggplot(data, aes(factor(Month), lmResid)) +
-    geom_point(color = "blue", alpha = 0.3, size =4) +
+    geom_boxplot() +
     ylab("Residual") + xlab("Month") +
     ggtitle("Linear model residuals by month") +
     theme(text = element_text(size=20))
