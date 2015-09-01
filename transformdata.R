@@ -32,4 +32,8 @@ frame1$monthNumSqred <- frame1$Month.Count^2
 frame1$monthNumCubed <- frame1$Month.Count^3
 
 ## If in Azure output the data frame.
-if(Azure) maml.mapOutputPort('frame1')
+if(Azure){
+  maml.mapOutputPort('frame1')
+} else {
+  frame1$Month <- as.factor(frame1$Month)
+}
